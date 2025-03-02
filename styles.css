@@ -35,7 +35,7 @@ nav a {
 
 .image img {
     width: 1000px; /* Increase the size */
-    max-width: 100%; /* Prevents it from being too big on small screens */
+ 
 }
 
 .text {
