@@ -32,7 +32,7 @@ main {
     align-items: center;
     justify-content: space-between; /* Push text and image apart */
     width: 80%;
-    margin: auto;
+    margin: 5;
 }
 
 .image {
@@ -42,7 +42,7 @@ main {
 }
 
 .image img {
-    width: 600px; /* Make the image bigger */
+    width: 800px; /* Make the image bigger */
     max-width: 100%;
 }
 
