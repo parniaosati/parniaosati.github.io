@@ -71,3 +71,17 @@ h1 {
     display: inline-block;
     margin-left: 50px; /* Moves "Osati" slightly to the right */
 }
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stacks image and rectangle */
+    align-items: center; /* Centers both elements */
+    margin-top: 50px; /* Adjust spacing above */
+}
+
+.rectangle {
+    width: 80%; /* Adjust width */
+    height: 100px; /* Adjust height */
+    background-color: #cf888d; /* Change color */
+    margin-top: -20px; /* Moves it closer to the image */
+}
+
