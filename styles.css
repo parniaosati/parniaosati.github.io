@@ -44,7 +44,7 @@ main {
 
 .image img {
     width: 800px; /* Make the image bigger */
-    max-width: 200%;
+    max-width: 100%;
    position: relative;
 }
 
