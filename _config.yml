@@ -5,7 +5,7 @@ author:
   email: "youremail@example.com"
 baseurl: "" # Empty for root URL
 url: "https://yourusername.github.io"
-theme: jekyll-theme-slate
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
