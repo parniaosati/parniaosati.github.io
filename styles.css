@@ -1,0 +1,50 @@
+body {
+    background-color: #f5f3ee; /* Cream background */
+    font-family: Arial, sans-serif;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.text {
+    flex: 1;
+}
+
+.image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
