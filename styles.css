@@ -39,11 +39,11 @@ main {
     display: flex;
     justify-content: flex-end; /* Moves image to the right */
     flex: 1; /* Balances with the text section */
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .image img {
-    width: 800px; /* Make the image bigger */
+    width: 600px; /* Make the image bigger */
     max-width: 100%;
    position: relative;
 }
