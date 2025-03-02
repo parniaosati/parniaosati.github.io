@@ -49,3 +49,12 @@ footer {
     display: flex;
     gap: 20px;
 }
+h1 {
+    font-size: 48px; /* Increase size */
+    font-weight: bold;
+}
+
+.last-name {
+    display: inline-block;
+    margin-left: 20px; /* Moves "Osati" slightly to the right */
+}
