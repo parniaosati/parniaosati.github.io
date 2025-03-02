@@ -27,11 +27,15 @@ nav a {
     color: black;
 }
 
-main {
+.image {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: center; /* Centers the image */
+    margin-top: 50px; /* Pushes the image downward */
+}
+
+.image img {
+    width: 500px; /* Increase the size */
+    max-width: 100%; /* Prevents it from being too big on small screens */
 }
 
 .text {
