@@ -27,15 +27,27 @@ nav a {
     color: black;
 }
 
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push text and image apart */
+    width: 80%;
+    margin: auto;
+}
+
 .image {
     display: flex;
-
-    margin-top: 70px; /* Pushes the image downward */
+    justify-content: flex-end; /* Moves image to the right */
+    flex: 1; /* Balances with the text section */
 }
 
 .image img {
-    width: 1000px; /* Increase the size */
- 
+    width: 600px; /* Make the image bigger */
+    max-width: 100%;
+}
+
+.text {
+    flex: 1;
 }
 
 .text {
