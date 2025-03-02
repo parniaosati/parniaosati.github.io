@@ -42,11 +42,6 @@ nav a {
     flex: 1;
 }
 
-.image img {
-    width: 400px; 
-    max-width: 100%; 
-    border-radius: 0px;
-}
 
 footer {
     margin-top: 20px;
@@ -54,11 +49,11 @@ footer {
     gap: 20px;
 }
 h1 {
-    font-size: 48px; /* Increase size */
+    font-size: 65px; /* Increase size */
     font-weight: bold;
 }
 
 .last-name {
     display: inline-block;
-    margin-left: 20px; /* Moves "Osati" slightly to the right */
+    margin-left: 30px; /* Moves "Osati" slightly to the right */
 }
