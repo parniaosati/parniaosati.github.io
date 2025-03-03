@@ -44,7 +44,7 @@ main {
 
 .image img {
     width: 600px; /* Increase width to match the marked area */
-    max-width: 150%;
+    max-width: 100%;
     position: relative;
 }
 
