@@ -43,8 +43,8 @@ main {
 }
 
 .image img {
-    width: 750px; /* Increase width to match the marked area */
-    max-width: 100%;
+    width: 600px; /* Increase width to match the marked area */
+    max-width: 150%;
     position: relative;
 }
 
