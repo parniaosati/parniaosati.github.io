@@ -1,5 +1,19 @@
 body {
-    background-color: #dbacb6; /* Cream background */
+    background: linear-gradient(to right, 
+        #cf888d 0%, #cf888d 10%, 
+        #d59599 10%, #d59599 20%, 
+        #daa3a6 20%, #daa3a6 30%, 
+        #dfb0b3 30%, #dfb0b3 40%, 
+        #e5bdc0 40%, #e5bdc0 50%, 
+        #eacacc 50%, #eacacc 60%, 
+        #efd7d9 60%, #efd7d9 70%, 
+        #f4e5e6 70%, #f4e5e6 80%, 
+        #faf2f2 80%, #faf2f2 90%, 
+        #ffffff 90%, #ffffff 100%
+    );
+    background-size: cover;
+    height: 100vh; /* Full screen height */
+    margin: 0;
     font-family: Arial, sans-serif;
     color: black;
     display: flex;
