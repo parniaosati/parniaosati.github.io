@@ -57,7 +57,7 @@ main {
 }
 
 .image img {
-    width: 600px; /* Increase width to match the marked area */
+    width: 300px; /* Increase width to match the marked area */
     max-width: 100%;
     position: relative;
 }
