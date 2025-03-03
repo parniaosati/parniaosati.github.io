@@ -39,7 +39,7 @@ main {
     display: flex;
     justify-content: flex-end; /* Moves image to the right */
     flex: 1; /* Balances with the text section */
-    margin-top: 90px;
+    margin-top: 70px;
 }
 
 .image img {
