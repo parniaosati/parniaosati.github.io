@@ -39,7 +39,7 @@ main {
     display: flex;
     justify-content: flex-end; /* Moves image to the right */
     flex: 1; /* Balances with the text section */
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 .image img {
@@ -75,7 +75,7 @@ h1 {
     display: flex;
     flex-direction: column; /* Stacks image and rectangle */
     align-items: center; /* Centers both elements */
-    margin-top: 50px; /* Adjust spacing above */
+    margin-top: 30px; /* Adjust spacing above */
 }
 
 .rectangle {
