@@ -31,8 +31,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Push text and image apart */
-    width: 80%;
-    margin: 5;
+    width: 90%; /* Increase width */
+    margin: auto; /* Centers the content */
 }
 
 .image {
@@ -43,9 +43,9 @@ main {
 }
 
 .image img {
-    width: 600px; /* Make the image bigger */
+    width: 750px; /* Increase width to match the marked area */
     max-width: 100%;
-   position: relative;
+    position: relative;
 }
 
 .text {
