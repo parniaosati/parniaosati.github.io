@@ -34,8 +34,19 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
 }
-
+.logo::after {
+    content: ""; /* Empty content to create the square */
+    display: block;
+    width: 15px; /* Adjust size as needed */
+    height: 15px; /* Adjust size as needed */
+    background-color: black;
+    position: absolute;
+    bottom: -10px; /* Moves it under the "P" */
+    left: 50%;
+    transform: translateX(-50%); /* Centers it under the text */
+}
 nav a {
     margin: 0 15px;
     text-decoration: none;
