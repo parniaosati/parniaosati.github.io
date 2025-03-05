@@ -103,7 +103,7 @@ h1 {
     position: relative;
     font-size: 65px; /* Increase size */
     font-weight: bold;
-    top: -30px;
+    top: 0px;
     left: 100px;
 }
 p {
