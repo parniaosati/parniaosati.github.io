@@ -99,6 +99,7 @@ h1 {
     font-size: 65px; /* Increase size */
     font-weight: bold;
     top: -60px;
+    left: 80px;
 }
 p {
     position: relative;
