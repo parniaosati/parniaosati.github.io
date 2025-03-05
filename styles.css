@@ -92,10 +92,3 @@ h1 {
   /* Adjust spacing above */
 }
 
-.rectangle {
-    width: 80%; /* Adjust width */
-    height: 100px; /* Adjust height */
-    background-color: #cf888d; /* Change color */
-    margin-top: -20px; /* Moves it closer to the image */
-}
-
