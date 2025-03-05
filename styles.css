@@ -47,13 +47,13 @@ header {
     height: 25px; /* Adjust size as needed */
     background-color: black;
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%); /* Centers it under the text */
     z-index: -1;
 }
 nav a {
-    margin: 0 30px;
+    margin: 0 35px;
     text-decoration: none;
     color: black;
 }
@@ -81,7 +81,7 @@ main {
     position: absolute;
     bottom: 0;
     right: 0; /* Ensures it stays on the right */
-    top: -5px;
+    top: -20px;
     width: 350px; /* Increase width to match the marked area */
     max-height: 100vh;
     max-width: 100%;
