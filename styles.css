@@ -53,7 +53,7 @@ header {
     z-index: -1;
 }
 nav a {
-    margin: 0 15px;
+    margin: 0 25px;
     text-decoration: none;
     color: black;
 }
@@ -74,7 +74,6 @@ main {
     justify-content: flex-end; /* Moves image to the right */
     flex: 1; /* Balances with the text section */
     margin-top: -50px;
-    margin-right: -50px;
    
 }
 
