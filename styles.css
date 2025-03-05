@@ -78,7 +78,7 @@ main {
     position: absolute;
     bottom: 0;
     right: 0; /* Ensures it stays on the right */
-    top: -40px;
+    top: -50px;
     width: 350px; /* Increase width to match the marked area */
     max-height: 100vh;
     max-width: 100%;
