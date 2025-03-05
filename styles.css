@@ -21,6 +21,7 @@ body {
     align-items: center;
     text-align: left;
     padding: 0px;
+    overflow: hidden;
 }
 
 header {
@@ -42,8 +43,10 @@ nav a {
 }
 
 main {
+    height: 100vh;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
+    position: relative;
     padding-top: 20px;
     justify-content: space-between; /* Push text and image apart */
     width: 90%; /* Increase width */
@@ -59,7 +62,10 @@ main {
 }
 
 .image img {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Ensures it stays on the right */
+    max-height: 100vh;
     top: -50px;
     width: 200px; /* Increase width to match the marked area */
     max-width: 100%;
