@@ -35,6 +35,8 @@ header {
     font-size: 24px;
     font-weight: bold;
     color: white;
+    position: relative; /* Allows absolute positioning inside */
+    display: inline-block;
 }
 .logo::after {
     content: ""; /* Empty content to create the square */
