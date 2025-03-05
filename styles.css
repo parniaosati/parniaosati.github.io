@@ -14,7 +14,7 @@ body {
     background-size: cover;
     height: 100vh; /* Full screen height */
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Garamond;
     color: black;
     display: flex;
     flex-direction: column;
@@ -95,13 +95,13 @@ footer {
 }
 h1 {
     position: relative;
-    font-size: 50px; /* Increase size */
+    font-size: 65px; /* Increase size */
     font-weight: bold;
-    top: -30px;
+    top: -60px;
 }
 p {
     position: relative;
-    top: -30px; /* Moves paragraph higher */
+    top: -60px; /* Moves paragraph higher */
     font-size: 14px;
 }
 
