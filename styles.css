@@ -53,7 +53,7 @@ header {
     z-index: -1;
 }
 nav a {
-    margin: 0 25px;
+    margin: 0 30px;
     text-decoration: none;
     color: black;
 }
@@ -81,7 +81,7 @@ main {
     position: absolute;
     bottom: 0;
     right: 0; /* Ensures it stays on the right */
-    top: -10px;
+    top: -5px;
     width: 350px; /* Increase width to match the marked area */
     max-height: 100vh;
     max-width: 100%;
