@@ -27,12 +27,18 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    align-items: center;
+    width: 90vw; /* Use viewport width to scale with screen */
     padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
 }
 
 .logo {
-    font-size: 24px;
+    font-size:  2vw;
     font-weight: bold;
     color: white;
     position: relative; /* Allows absolute positioning inside */
@@ -43,8 +49,8 @@ header {
 .logo::after {
     content: ""; /* Empty content to create the square */
     display: block;
-    width: 25px; /* Adjust size as needed */
-    height: 25px; /* Adjust size as needed */
+    width: 2vw; /* Keep size relative */
+    height: 2vw;
     background-color: black;
     position: absolute;
     bottom: 11px;
@@ -52,10 +58,17 @@ header {
     transform: translateX(-50%); /* Centers it under the text */
     z-index: -1;
 }
+nav {
+    display: flex;
+    gap: 5vw; /* Scale spacing dynamically */
+    width: 60%; /* Adjust for consistent alignment */
+    justify-content: space-between;
+}
 nav a {
-    margin: 0 32px;
     text-decoration: none;
     color: black;
+    font-size: 1.2vw; /* Scales with screen */
+    transition: all 0.3s ease;
 }
 
 main {
