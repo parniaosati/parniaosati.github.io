@@ -74,6 +74,7 @@ main {
     justify-content: flex-end; /* Moves image to the right */
     flex: 1; /* Balances with the text section */
     margin-top: -50px;
+    margin-right: -50px;
    
 }
 
@@ -85,6 +86,7 @@ main {
     width: 350px; /* Increase width to match the marked area */
     max-height: 100vh;
     max-width: 100%;
+    transform: translateX(-50px);
 }
 
 .text {
