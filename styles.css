@@ -44,6 +44,7 @@ nav a {
 main {
     display: flex;
     align-items: flex-start;
+    padding-top: 20px;
     justify-content: space-between; /* Push text and image apart */
     width: 90%; /* Increase width */
     margin: auto; /* Centers the content */
@@ -66,10 +67,7 @@ main {
 
 .text {
     flex: 1;
-}
-
-.text {
-    flex: 1;
+    margin-top: -50px;
 }
 
 
@@ -79,8 +77,15 @@ footer {
     gap: 20px;
 }
 h1 {
+    position: relative;
     font-size: 50px; /* Increase size */
     font-weight: bold;
+    top: -30px;
+}
+p {
+    position: relative;
+    top: -30px; /* Moves paragraph higher */
+    font-size: 14px;
 }
 
 .last-name {
