@@ -47,13 +47,13 @@ header {
     height: 25px; /* Adjust size as needed */
     background-color: black;
     position: absolute;
-    bottom: 10px;
+    bottom: 11px;
     left: 50%;
     transform: translateX(-50%); /* Centers it under the text */
     z-index: -1;
 }
 nav a {
-    margin: 0 35px;
+    margin: 0 32px;
     text-decoration: none;
     color: black;
 }
@@ -103,7 +103,7 @@ h1 {
     position: relative;
     font-size: 65px; /* Increase size */
     font-weight: bold;
-    top: 0px;
+    top: -50px;
     left: 100px;
 }
 p {
