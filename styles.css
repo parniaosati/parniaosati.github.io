@@ -37,6 +37,8 @@ header {
     color: white;
     position: relative; /* Allows absolute positioning inside */
     display: inline-block;
+    padding: 10px; /* Adjust spacing */
+    z-index: 2; /* Ensures "P" stays on top */
 }
 .logo::after {
     content: ""; /* Empty content to create the square */
@@ -45,9 +47,10 @@ header {
     height: 25px; /* Adjust size as needed */
     background-color: black;
     position: absolute;
-    bottom: -8px;
+    bottom: -3px;
     left: 50%;
     transform: translateX(-50%); /* Centers it under the text */
+    z-index: -1;
 }
 nav a {
     margin: 0 15px;
