@@ -26,11 +26,9 @@ body {
 
 header {
     display: flex;
-    justify-content: center; /* Centers navbar */
-    align-items: center;
-    width: 100%;
-    padding: 20px 0;
-    flex-wrap: wrap; /* Ensures navbar adapts */
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px;
 }
 
 .logo {
@@ -54,24 +52,16 @@ header {
     transform: translateX(-50%); /* Centers it under the text */
     z-index: -1;
 }
-
-nav {
-    display: flex;
-    gap: 50px; /* Spaces out the links evenly */
-    flex-wrap: wrap; /* Ensures links don't overlap */
-    justify-content: center;
-}
-
 nav a {
+    margin: 0 32px;
     text-decoration: none;
     color: black;
-    font-size: 18px; /* Adjust for better readability */
 }
 
 main {
     height: 100vh;
     display: flex;
-    align-items: center; /* Centers content properly */
+    align-items: flex-end;
     position: relative;
     padding-top: 20px;
     justify-content: space-between; /* Push text and image apart */
@@ -84,16 +74,18 @@ main {
     justify-content: flex-end; /* Moves image to the right */
     flex: 1; /* Balances with the text section */
     margin-top: -50px;
+   
 }
 
 .image img {
     position: absolute;
     bottom: 0;
     right: 0; /* Ensures it stays on the right */
-    width: 100%; /* Makes image responsive */
-    max-width: 350px; /* Ensures image is not too large */
-    height: auto;
-    transform: translateX(-30px); /* Moves the image slightly left */
+    top: -20px;
+    width: 350px; /* Increase width to match the marked area */
+    max-height: 100vh;
+    max-width: 100%;
+    transform: translateX(-50px);
 }
 
 .text {
@@ -101,18 +93,18 @@ main {
     margin-top: -50px;
 }
 
+
 footer {
     margin-top: 20px;
     display: flex;
     gap: 20px;
 }
-
 h1 {
     position: relative;
     font-size: 65px; /* Increase size */
     font-weight: bold;
     top: -50px;
-    left: 80px;
+    left: 100px;
 }
 p {
     position: relative;
@@ -123,40 +115,4 @@ p {
 .last-name {
     display: inline-block;
     margin-left: 50px; /* Moves "Osati" slightly to the right */
-}
-
-/* RESPONSIVE DESIGN - Fix layout on smaller screens */
-@media screen and (max-width: 768px) {
-    main {
-        flex-direction: column; /* Stacks text and image */
-        align-items: center;
-        text-align: center;
-    }
-
-    .image img {
-        position: static; /* Prevents absolute positioning */
-        transform: none; /* Resets transformations */
-        max-width: 80%; /* Ensures image scales */
-    }
-
-    .text {
-        margin-top: 20px;
-    }
-
-    nav {
-        flex-direction: column; /* Stack navigation links */
-        text-align: center;
-        gap: 20px;
-    }
-
-    h1 {
-        font-size: 45px; /* Adjust title size */
-        left: 0;
-        text-align: center;
-    }
-
-    p {
-        font-size: 12px; /* Adjust paragraph size */
-        text-align: center;
-    }
 }
