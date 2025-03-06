@@ -26,9 +26,10 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: space-evenly;
+    width: 100%;
     padding: 20px;
+    position: relative;
 }
 
 .logo {
@@ -53,9 +54,22 @@ header {
     z-index: -1;
 }
 nav a {
-    margin: 0 32px;
+    margin: 0;
+    padding: 10px 20px; /* Add padding to create space around each link */
     text-decoration: none;
     color: black;
+    position: relative;
+}
+nav a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color */
+    z-index: -1;
 }
 
 main {
