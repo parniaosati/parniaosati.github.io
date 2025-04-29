@@ -1,11 +1,16 @@
-/* Background color for the publications page */
+/* General Styles */
 body {
-    background-color: #f4e5e6; /* light pink color */
     font-family: Garamond, serif;
     color: black;
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+/* Specific styling for publications page */
+body.publications-page {
+    background-color: #f4e5e6; /* light pink color */
+    background: none; /* Remove the gradient background */
 }
 
 /* Tab bar */
