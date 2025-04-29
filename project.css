@@ -38,26 +38,27 @@ main {
   margin: auto;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.project-title {
+  font-size: 40px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .short-description {
   font-size: 16px;
-  margin-bottom: 40px;
-  line-height: 1.6;
   text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.6;
 }
 
 .abstract-box {
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
-  max-height: 500px;
-  overflow-y: scroll;
+  max-height: 700px;         /* taller box */
+  overflow-y: auto;          /* enables scroll inside */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
 }
 
 .abstract-box h2 {
@@ -66,6 +67,6 @@ h1 {
 
 .abstract-box p {
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.7;
   white-space: pre-line;
 }
