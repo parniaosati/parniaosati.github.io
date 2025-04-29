@@ -38,34 +38,36 @@ main {
   margin: auto;
 }
 
-h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+.page-title {
+  font-size: 40px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.short-description {
-  font-size: 16px;
-  margin-bottom: 40px;
-  line-height: 1.6;
-  text-align: center;
+.separator {
+  border: 1px solid #444;
+  width: 90%;
+  margin: 0 auto 40px auto;
 }
 
-.abstract-box {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  max-height: 500px;
-  overflow-y: scroll;
+.project-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.publication-img {
+  display: block;
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.abstract-box h2 {
-  margin-top: 0;
-}
-
-.abstract-box p {
-  font-size: 15px;
-  line-height: 1.6;
-  white-space: pre-line;
+.publication-img:hover {
+  transform: scale(1.03);
 }
