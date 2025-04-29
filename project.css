@@ -55,8 +55,8 @@ main {
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
-  max-height: 700px;         /* taller box */
-  overflow-y: auto;          /* enables scroll inside */
+  max-height: 700px;
+  overflow-y: auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
 }
@@ -69,4 +69,19 @@ main {
   font-size: 15px;
   line-height: 1.7;
   white-space: pre-line;
+}
+
+.image-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
