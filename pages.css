@@ -1,0 +1,71 @@
+body.project-page {
+  background-color: #f4e5e6;
+  font-family: Garamond, serif;
+  color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0 20px;
+  font-size: 16px;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px 10%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.short-description {
+  font-size: 16px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.abstract-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 500px;
+  overflow-y: scroll;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.abstract-box h2 {
+  margin-top: 0;
+}
+
+.abstract-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: pre-line;
+}
