@@ -1,89 +1,118 @@
-/* General Styles */
 body {
-    font-family: Garamond, serif;
-    color: black;
+    background: linear-gradient(to right, 
+        #cf888d 0%, #cf888d 10%, 
+        #d59599 10%, #d59599 20%, 
+        #daa3a6 20%, #daa3a6 30%, 
+        #dfb0b3 30%, #dfb0b3 40%, 
+        #e5bdc0 40%, #e5bdc0 50%, 
+        #eacacc 50%, #eacacc 60%, 
+        #efd7d9 60%, #efd7d9 70%, 
+        #f4e5e6 70%, #f4e5e6 80%, 
+        #faf2f2 80%, #faf2f2 90%, 
+        #ffffff 90%, #ffffff 100%
+    );
+    background-size: cover;
+    height: 100vh; /* Full screen height */
     margin: 0;
-    padding: 0;
+    font-family: Garamond;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 0px;
     overflow: hidden;
 }
 
-/* Specific styling for publications page */
-body.publications-page {
-    background-color: #f4e5e6; /* light pink color */
-    background: none; /* Remove the gradient background */
-}
-
-/* Tab bar */
 header {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: black;
+    color: white;
+    position: relative; /* Allows absolute positioning inside */
+    display: inline-block;
+    padding: 10px; /* Adjust spacing */
+    z-index: 2; /* Ensures "P" stays on top */
 }
-
+.logo::after {
+    content: ""; /* Empty content to create the square */
+    display: block;
+    width: 25px; /* Adjust size as needed */
+    height: 25px; /* Adjust size as needed */
+    background-color: black;
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers it under the text */
+    z-index: -1;
+}
 nav a {
+    margin: 0 32px;
     text-decoration: none;
     color: black;
-    margin: 0 20px;
-    font-size: 16px;
 }
 
-nav a.active {
-    text-decoration: underline; /* Underline the current page */
+main {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    padding-top: 20px;
+    justify-content: space-between; /* Push text and image apart */
+    width: 90%; /* Increase width */
+    margin: auto; /* Centers the content */
 }
 
-/* Title for publications page */
+.image {
+    display: flex;
+    justify-content: flex-end; /* Moves image to the right */
+    flex: 1; /* Balances with the text section */
+    margin-top: -50px;
+   
+}
+
+.image img {
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Ensures it stays on the right */
+    top: -20px;
+    width: 350px; /* Increase width to match the marked area */
+    max-height: 100vh;
+    max-width: 100%;
+    transform: translateX(-50px);
+}
+
+.text {
+    flex: 1;
+    margin-top: -50px;
+}
+
+
+footer {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
 h1 {
-    font-size: 40px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* Black line under the title */
-hr.separator {
-    border: 1px solid black;
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* Styling the individual project sections */
-.project {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.project-title {
-    font-size: 24px;
+    position: relative;
+    font-size: 65px; /* Increase size */
     font-weight: bold;
-    margin-bottom: 10px;
+    top: -50px;
+    left: 100px;
+}
+p {
+    position: relative;
+    top: -60px; /* Moves paragraph higher */
+    font-size: 14px;
 }
 
-.project img {
-    width: 600px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.project img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Link styling */
-.project a {
-    text-decoration: none;
-    color: black;
-}
-
-.project a:hover .project-title {
-    color: #cf888d; /* Change title color on hover */
+.last-name {
+    display: inline-block;
+    margin-left: 50px; /* Moves "Osati" slightly to the right */
 }
