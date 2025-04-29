@@ -12,6 +12,7 @@
       color: black;
       margin: 0;
       padding: 0;
+      overflow-x: hidden; /* Allow vertical scrolling, prevent horizontal */
     }
 
     header {
@@ -48,12 +49,14 @@
     h1 {
       font-size: 36px;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .short-description {
       font-size: 16px;
       margin-bottom: 40px;
       line-height: 1.6;
+      text-align: center;
     }
 
     .abstract-box {
@@ -77,19 +80,18 @@
   </style>
 </head>
 <body class="project-page">
-  <!-- Header with navigation -->
+  <!-- Header with correct nav -->
   <header>
     <div class="logo">P</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
-      <a href="publications.html">The Perfect Design</a>
+      <a href="publications.html" class="active">Publications</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Main content -->
   <main>
     <h1>The Perfect Design</h1>
     <div class="short-description">
