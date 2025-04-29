@@ -4,83 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Perfect Design - Parnia Osati</title>
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    body.project-page {
-      background-color: #f4e5e6;
-      font-family: Garamond, serif;
-      color: black;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden; /* Allow vertical scrolling, prevent horizontal */
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: black;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: black;
-      margin: 0 20px;
-      font-size: 16px;
-    }
-
-    nav a.active {
-      text-decoration: underline;
-    }
-
-    main {
-      padding: 40px 10%;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-
-    .short-description {
-      font-size: 16px;
-      margin-bottom: 40px;
-      line-height: 1.6;
-      text-align: center;
-    }
-
-    .abstract-box {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      max-height: 500px;
-      overflow-y: scroll;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .abstract-box h2 {
-      margin-top: 0;
-    }
-
-    .abstract-box p {
-      font-size: 15px;
-      line-height: 1.6;
-      white-space: pre-line;
-    }
-  </style>
+  <link rel="stylesheet" href="pages.css" />
 </head>
 <body class="project-page">
-  <!-- Header with correct nav -->
   <header>
     <div class="logo">P</div>
     <nav>
@@ -102,11 +28,7 @@
     <div class="abstract-box">
       <h2>Title: Beyond Human Perception: Applying Deep Generative Models to Multi-Dimensional Design Optimization</h2>
       <p>
-Abstract: Is there such a thing as "the perfect design"? Traditional design processes, reliant on human perception, fall short due to scalability and efficiency issues when working with large multi-dimensional design spaces. These limitations inhibit any product or space from being optimal in every aspect. Adapting generative Machine Learning(ML), especially Deep Generative Models (DGMs) to design engineering can address these setbacks which is a research subject of great importance. We present a trained model that leverages user design features, objectives, and weighted evaluation metrics to generate data for crafting the ideal product or space, addressing the limitations of human handling of complex datasets.
-
-The framework begins with generating design inputs, such as form, material, and functional constraints, from a comprehensive database. Design objectives, each with assigned weights and scores, are systematically combined via a Cartesian multiplication product to generate diverse design concepts. Techniques like Principal Component Analysis (PCA) and t-Distributed Stochastic Neighbor Embedding (t-SNE) reduce the complexity of the design space, enabling more effective clustering and evaluation. By training a Machine Learning model with a brute-force algorithm, we can generate a sorted list of clustered results, allowing us to rank and extract the best outcomes based on weighted objectives.
-
-Generative Adversarial Networks (GANs) are then employed to predict and visualize design outcomes, while neuropsychological testing in virtual environments captures real-time user feedback on aesthetics, functionality, and usability. Finally, a significant improvement in quality and feasibility was demonstrated during testing the proposed framework on a pavilion design, outperforming the traditional methods.
+Abstract: Is there such a thing as "the perfect design"? Traditional design processes, reliant on human perception, fall short due to scalability and efficiency issues when working with large multi-dimensional design spaces...
       </p>
     </div>
   </main>
