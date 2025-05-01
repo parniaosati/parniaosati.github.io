@@ -1,4 +1,4 @@
-/* 1) Make body a column-flex so header then main fill the viewport */
+/* 1) Base and body as column-flex */
 html, body {
   margin: 0;
   padding: 0;
@@ -52,23 +52,23 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* 3) Main fills remaining screen space */
+/* 3) Main flex fills viewport */
 main {
   flex: 1 1 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;            /* so children can stretch vertically */
+  align-items: stretch;
   padding: 0 5%;
   box-sizing: border-box;
 }
 
-/* 4) Text side */
+/* 4) Text column */
 .text {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;         /* vertical centering of text */
+  justify-content: center;
 }
 h1 {
   font-size: 65px;
@@ -76,8 +76,8 @@ h1 {
   margin: 0 0 20px 100px;
 }
 .last-name {
-  margin-left: 50px;
   display: inline-block;
+  margin-left: 50px;
 }
 p {
   font-size: 14px;
@@ -86,13 +86,12 @@ p {
   line-height: 1.6;
 }
 
-/* 5) Image side, bottom-align */
+/* 5) Image column, pinned bottom */
 .image {
   flex: 1 1 0;
   display: flex;
   justify-content: center;
-  align-items: flex-end;           /* ⬅️ THIS pins it to bottom of main */
-  box-sizing: border-box;
+  align-items: flex-end;
 }
 .image img {
   max-width: 100%;
@@ -101,7 +100,28 @@ p {
   border-radius: 10px;
 }
 
-/* 6) Stack for small screens */
+/* 6) Jake Peralta motto styling */
+.motto {
+  margin: 40px 100px;
+  padding: 20px;
+  background: rgba(255,255,255,0.8);
+  border-left: 4px solid #cf888d;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #333;
+  max-width: 500px;
+}
+.motto cite {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: right;
+  color: #555;
+}
+
+/* 7) Responsive: stack on small screens */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
@@ -112,7 +132,7 @@ p {
     width: 100%;
   }
   .text {
-    justify-content: flex-start;    /* text at top on mobile */
+    justify-content: flex-start;
   }
   h1, p {
     margin-left: 20px;
@@ -125,11 +145,15 @@ p {
     font-size: 14px;
   }
   .image {
-    align-items: center;            /* center on narrow */
+    align-items: center;
     margin-top: 30px;
   }
   .image img {
     max-width: 90%;
     max-height: none;
+  }
+  .motto {
+    margin: 30px 20px;
+    max-width: none;
   }
 }
