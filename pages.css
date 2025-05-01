@@ -5,6 +5,7 @@ body.project-page {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 header {
@@ -36,6 +37,7 @@ main {
   padding: 40px 10%;
   max-width: 1000px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .page-title {
@@ -55,7 +57,6 @@ main {
   margin-bottom: 40px;
 }
 
-/* Project title styling */
 .project-link {
   text-decoration: none;
   color: black;
@@ -69,13 +70,11 @@ main {
   transition: all 0.3s ease;
 }
 
-/* Underline only on hover */
 .project-link:hover .project-title,
 .project-link:hover img {
   text-decoration: underline;
 }
 
-/* Publication image styling */
 .publication-img {
   display: block;
   max-width: 400px;
