@@ -11,17 +11,15 @@ body {
     #faf2f2 80%, #faf2f2 90%,
     #ffffff 90%, #ffffff 100%
   );
-  background-size: cover;
   margin: 0;
   font-family: Garamond;
   color: black;
   text-align: left;
-  padding: 0;
   overflow-x: hidden;
-  overflow-y: auto;
+  height: 100vh;
 }
 
-/* ✅ Sticky Header */
+/* Sticky Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -42,7 +40,6 @@ header {
   position: relative;
   display: inline-block;
   padding: 10px;
-  z-index: 2;
 }
 
 .logo::after {
@@ -68,20 +65,21 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* Main layout */
+/* ✅ FLEX LAYOUT: side by side on large screens */
 main {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   width: 90%;
   margin: auto;
-  padding-top: 50px;
+  height: calc(100vh - 60px); /* fill screen below header */
+  box-sizing: border-box;
 }
 
-/* Text Section */
+/* Text */
 .text {
-  margin-bottom: 50px;
+  flex: 1;
+  padding-right: 20px;
 }
 
 h1 {
@@ -102,35 +100,37 @@ p {
   line-height: 1.6;
 }
 
-/* Image Section */
+/* Image */
 .image {
-  width: 100%;
+  flex: 1;
   display: flex;
   justify-content: center;
-  position: relative;
-  margin-top: 50px;
+  align-items: flex-end;
 }
 
 .image img {
-  width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   height: auto;
-  position: relative;
-  bottom: 0;
+  max-height: 90vh;
   border-radius: 10px;
 }
 
-/* Optional Footer Styling */
-footer {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-}
+/* Responsive: stack vertically on small screens */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding-top: 30px;
+  }
 
-/* ✅ Responsive Tweaks */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 42px;
+  .text, .image {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  h1, p {
     margin-left: 20px;
   }
 
@@ -138,18 +138,17 @@ footer {
     margin-left: 20px;
   }
 
-  p {
-    margin-left: 20px;
-    font-size: 13px;
-    max-width: 90%;
-  }
-
   nav a {
     margin: 0 12px;
     font-size: 14px;
   }
 
+  .image {
+    margin-top: 30px;
+  }
+
   .image img {
     max-width: 90%;
+    height: auto;
   }
 }
