@@ -65,14 +65,14 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* ✅ FLEX LAYOUT: side by side on large screens */
+/* Flex Layout */
 main {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 90%;
   margin: auto;
-  height: calc(100vh - 60px); /* fill screen below header */
+  height: calc(100vh - 60px); /* viewport height minus header */
   box-sizing: border-box;
 }
 
@@ -100,33 +100,36 @@ p {
   line-height: 1.6;
 }
 
-/* Image */
+/* Image — now correctly bottom-aligned */
 .image {
   flex: 1;
   display: flex;
+  align-items: flex-end;      /* Aligns image to the bottom */
   justify-content: center;
-  align-items: flex-end;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .image img {
   max-width: 100%;
   height: auto;
   max-height: 90vh;
+  object-fit: contain;
   border-radius: 10px;
+  margin-bottom: 0;
 }
 
-/* Responsive: stack vertically on small screens */
+/* Responsive Tweaks for Mobile */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     height: auto;
     padding-top: 30px;
   }
 
   .text, .image {
-    margin: 0;
-    padding: 0;
     width: 100%;
   }
 
