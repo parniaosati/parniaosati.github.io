@@ -1,3 +1,11 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Garamond, serif;
+  color: black;
+}
+
 body {
   background: linear-gradient(to right,
     #cf888d 0%, #cf888d 10%,
@@ -11,15 +19,11 @@ body {
     #faf2f2 80%, #faf2f2 90%,
     #ffffff 90%, #ffffff 100%
   );
-  margin: 0;
-  font-family: Garamond;
-  color: black;
-  text-align: left;
+  background-size: cover;
   overflow-x: hidden;
-  height: 100vh;
 }
 
-/* Sticky Header */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -65,21 +69,23 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* Flex Layout */
+/* Main Layout */
 main {
   display: flex;
-  align-items: flex-end;
+  flex-direction: row;
   justify-content: space-between;
-  width: 90%;
-  margin: auto;
-  height: calc(100vh - 60px); /* viewport height minus header */
+  align-items: stretch;
+  height: calc(100vh - 60px); /* Fill screen height below header */
+  padding: 0 5%;
   box-sizing: border-box;
 }
 
-/* Text */
+/* Text Block */
 .text {
   flex: 1;
-  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
@@ -100,33 +106,29 @@ p {
   line-height: 1.6;
 }
 
-/* Image — now correctly bottom-aligned */
+/* Image Block */
 .image {
   flex: 1;
   display: flex;
-  align-items: flex-end;      /* Aligns image to the bottom */
+  align-items: flex-end;
   justify-content: center;
-  height: 100%;
-  box-sizing: border-box;
+  padding-bottom: 0;
 }
 
 .image img {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
-  max-height: 90vh;
   object-fit: contain;
   border-radius: 10px;
-  margin-bottom: 0;
 }
 
-/* Responsive Tweaks for Mobile */
+/* Responsive: Stack on narrow screens */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
     height: auto;
-    padding-top: 30px;
+    padding: 30px 5%;
   }
 
   .text, .image {
@@ -148,6 +150,7 @@ p {
 
   .image {
     margin-top: 30px;
+    align-items: center;
   }
 
   .image img {
