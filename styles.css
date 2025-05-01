@@ -1,3 +1,4 @@
+/* 1) Make body a column-flex so header then main fill the viewport */
 html, body {
   margin: 0;
   padding: 0;
@@ -5,8 +6,9 @@ html, body {
   font-family: Garamond, serif;
   color: black;
 }
-
 body {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(to right,
     #cf888d 0%, #cf888d 10%,
     #d59599 10%, #d59599 20%,
@@ -23,138 +25,111 @@ body {
   overflow-x: hidden;
 }
 
-/* Header */
+/* 2) Sticky header */
 header {
+  flex: 0 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 1px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 10px 5%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-
 .logo {
   font-size: 24px;
   font-weight: bold;
-  color: white;
-  position: relative;
-  display: inline-block;
-  padding: 10px;
+  color: black;
 }
-
-.logo::after {
-  content: "";
-  display: block;
-  width: 25px;
-  height: 25px;
-  background-color: black;
-  position: absolute;
-  bottom: 11px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: -1;
-}
-
 nav a {
-  margin: 0 32px;
+  margin: 0 16px;
   text-decoration: none;
   color: black;
 }
-
 nav a.active {
   text-decoration: underline;
 }
 
-/* Main Layout */
+/* 3) Main fills remaining screen space */
 main {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-  height: calc(100vh - 60px); /* Fill screen height below header */
+  align-items: stretch;            /* so children can stretch vertically */
   padding: 0 5%;
   box-sizing: border-box;
 }
 
-/* Text Block */
+/* 4) Text side */
 .text {
-  flex: 1;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;         /* vertical centering of text */
 }
-
 h1 {
   font-size: 65px;
   font-weight: bold;
-  margin-left: 100px;
+  margin: 0 0 20px 100px;
 }
-
 .last-name {
-  display: inline-block;
   margin-left: 50px;
+  display: inline-block;
 }
-
 p {
   font-size: 14px;
-  margin-left: 100px;
+  margin: 0 0 0 100px;
   max-width: 600px;
   line-height: 1.6;
 }
 
-/* Image Block */
+/* 5) Image side, bottom-align */
 .image {
-  flex: 1;
+  flex: 1 1 0;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-  padding-bottom: 0;
+  align-items: flex-end;           /* ⬅️ THIS pins it to bottom of main */
+  box-sizing: border-box;
 }
-
 .image img {
   max-width: 100%;
   max-height: 100%;
-  height: auto;
   object-fit: contain;
   border-radius: 10px;
 }
 
-/* Responsive: Stack on narrow screens */
+/* 6) Stack for small screens */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
-    height: auto;
     padding: 30px 5%;
+    overflow-y: auto;
   }
-
   .text, .image {
     width: 100%;
   }
-
+  .text {
+    justify-content: flex-start;    /* text at top on mobile */
+  }
   h1, p {
     margin-left: 20px;
   }
-
   .last-name {
     margin-left: 20px;
   }
-
   nav a {
-    margin: 0 12px;
+    margin: 0 8px;
     font-size: 14px;
   }
-
   .image {
+    align-items: center;            /* center on narrow */
     margin-top: 30px;
-    align-items: center;
   }
-
   .image img {
     max-width: 90%;
-    height: auto;
+    max-height: none;
   }
 }
