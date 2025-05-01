@@ -1,4 +1,4 @@
-/* 1) Base and body as column-flex */
+/* 1) Base setup */
 html, body {
   margin: 0;
   padding: 0;
@@ -6,6 +6,7 @@ html, body {
   font-family: Garamond, serif;
   color: black;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -38,21 +39,16 @@ header {
   top: 0;
   z-index: 1000;
 }
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: black;
-}
+
+.logo { font-size: 24px; font-weight: bold; color: black; }
 nav a {
   margin: 0 16px;
   text-decoration: none;
   color: black;
 }
-nav a.active {
-  text-decoration: underline;
-}
+nav a.active { text-decoration: underline; }
 
-/* 3) Main flex fills viewport */
+/* 3) Main fills rest of screen */
 main {
   flex: 1 1 auto;
   display: flex;
@@ -75,10 +71,7 @@ h1 {
   font-weight: bold;
   margin: 0 0 20px 100px;
 }
-.last-name {
-  display: inline-block;
-  margin-left: 50px;
-}
+.last-name { display: inline-block; margin-left: 50px; }
 p {
   font-size: 14px;
   margin: 0 0 0 100px;
@@ -86,21 +79,7 @@ p {
   line-height: 1.6;
 }
 
-/* 5) Image column, pinned bottom */
-.image {
-  flex: 1 1 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-/* 6) Jake Peralta motto styling */
+/* 5) Motto styling */
 .motto {
   margin: 40px 100px;
   padding: 20px;
@@ -121,39 +100,56 @@ p {
   color: #555;
 }
 
-/* 7) Responsive: stack on small screens */
+/* 6) Image column pinned at bottom */
+.image {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;   /* ⬅️ Always bottom-align */
+}
+.image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* 7) Responsive: stack but still bottom-align */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
     padding: 30px 5%;
-    overflow-y: auto;
+    /* keep flex:1 so main still fills viewport */
   }
-  .text, .image {
-    width: 100%;
-  }
+
   .text {
     justify-content: flex-start;
   }
+
   h1, p {
     margin-left: 20px;
   }
   .last-name {
     margin-left: 20px;
   }
+
   nav a {
     margin: 0 8px;
     font-size: 14px;
   }
-  .image {
-    align-items: center;
-    margin-top: 30px;
-  }
-  .image img {
-    max-width: 90%;
-    max-height: none;
-  }
+
   .motto {
     margin: 30px 20px;
     max-width: none;
+  }
+
+  .image {
+    /* still bottom-align within its flexed space */
+    align-items: flex-end;
+  }
+
+  .image img {
+    max-width: 90%;
+    max-height: 100%;
   }
 }
