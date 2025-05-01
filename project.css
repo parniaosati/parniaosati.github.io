@@ -5,6 +5,7 @@ body.project-page {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 header {
@@ -36,6 +37,7 @@ main {
   padding: 40px 10%;
   max-width: 1000px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .project-title {
