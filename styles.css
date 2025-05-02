@@ -114,13 +114,13 @@ p {
 }
 
 .motto {
-  padding: 24px 20px;
+  margin: 40px 0 0 10%;
+  padding: 20px;
   font-style: italic;
   font-size: 26px;
   line-height: 1.6;
   color: #444;
-  border-radius: 6px;
-  position: relative;
+  max-width: 60%;
 }
 
 .motto p {
