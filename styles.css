@@ -1,4 +1,3 @@
-/* 1) Base setup */
 html, body {
   margin: 0;
   padding: 0;
@@ -26,7 +25,6 @@ body {
   overflow-x: hidden;
 }
 
-/* 2) Sticky header */
 header {
   flex: 0 0 auto;
   display: flex;
@@ -40,15 +38,22 @@ header {
   z-index: 1000;
 }
 
-.logo { font-size: 24px; font-weight: bold; color: black; }
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
 nav a {
   margin: 0 16px;
   text-decoration: none;
   color: black;
 }
-nav a.active { text-decoration: underline; }
 
-/* 3) Main fills rest of screen */
+nav a.active {
+  text-decoration: underline;
+}
+
 main {
   flex: 1 1 auto;
   display: flex;
@@ -59,54 +64,64 @@ main {
   box-sizing: border-box;
 }
 
-/* 4) Text column */
 .text {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 h1 {
   font-size: 65px;
   font-weight: bold;
   margin: 0 0 20px 100px;
 }
-.last-name { display: inline-block; margin-left: 50px; }
-p {
-  font-size: 14px;
-  margin: 0 0 0 100px;
-  max-width: 600px;
-  line-height: 1.6;
+
+.last-name {
+  display: inline-block;
+  margin-left: 50px;
 }
 
-/* 5) Motto styling */
+.intro {
+  font-size: 18px;
+  margin: 0 0 0 100px;
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+/* Motto — clean, no box */
 .motto {
   margin: 40px 100px;
-  padding: 20px;
-  background: rgba(255,255,255,0.8);
-  border-left: 4px solid #cf888d;
   font-style: italic;
   font-size: 18px;
-  line-height: 1.4;
-  color: #333;
-  max-width: 500px;
+  line-height: 1.5;
+  color: #111;
 }
+
+.motto-intro {
+  font-style: normal;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
 .motto cite {
   display: block;
   margin-top: 8px;
   font-style: normal;
   font-weight: bold;
-  text-align: right;
   color: #555;
+  text-align: right;
 }
 
-/* 6) Image column pinned at bottom */
+/* Image styling */
 .image {
   flex: 1 1 0;
   display: flex;
   justify-content: center;
-  align-items: flex-end;   /* ⬅️ Always bottom-align */
+  align-items: flex-end;
 }
+
 .image img {
   max-width: 100%;
   max-height: 100%;
@@ -114,23 +129,28 @@ p {
   border-radius: 10px;
 }
 
-/* 7) Responsive: stack but still bottom-align */
+/* Responsive layout */
 @media (max-width: 900px) {
   main {
     flex-direction: column;
     padding: 30px 5%;
-    /* keep flex:1 so main still fills viewport */
   }
 
   .text {
     justify-content: flex-start;
   }
 
-  h1, p {
+  h1, .intro {
     margin-left: 20px;
   }
+
   .last-name {
     margin-left: 20px;
+  }
+
+  .motto {
+    margin: 30px 20px;
+    font-size: 16px;
   }
 
   nav a {
@@ -138,14 +158,9 @@ p {
     font-size: 14px;
   }
 
-  .motto {
-    margin: 30px 20px;
-    max-width: none;
-  }
-
   .image {
-    /* still bottom-align within its flexed space */
     align-items: flex-end;
+    margin-top: 30px;
   }
 
   .image img {
