@@ -80,7 +80,7 @@ h1 {
   margin-left: 50px;
 }
 p {
-  font-size: 18px;
+  font-size: 24px;
   margin: 0 0 0 100px;
   max-width: 600px;
   line-height: 1.6;
@@ -116,7 +116,7 @@ p {
 .motto {
   padding: 24px 20px;
   font-style: italic;
-  font-size: 22px;
+  font-size: 26px;
   line-height: 1.6;
   color: #444;
   border-radius: 6px;
