@@ -112,14 +112,7 @@ p {
   color: #333;
   max-width: 500px;
 }
-.motto cite {
-  display: block;
-  margin-top: 8px;
-  font-style: normal;
-  font-weight: bold;
-  text-align: right;
-  color: #555;
-}
+
 
 /* 7) Responsive: stack on small screens */
 @media (max-width: 900px) {
