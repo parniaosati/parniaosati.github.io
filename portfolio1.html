@@ -2,65 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>2025 PORTFOLIO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="project.css" />
+  <title>2025 Portfolio - Parnia Osati</title>
 
-  <!-- ✅ PageFlip CSS -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/page-flip/dist/page-flip.min.css"
-  />
-  <style>
-    #flipbook-container {
-      width: 90%;
-      max-width: 1100px;
-      margin: 50px auto;
-    }
-  </style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="project.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip/dist/css/page-flip.min.css" />
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
 </head>
 <body class="project-page">
   <header>
     <div class="logo">P</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html" class="active">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a class="active" href="portfolio1.html">Portfolio</a>
       <a href="publications.html">Publications</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <h1 class="project-title">2025 PORTFOLIO</h1>
-    <div id="flipbook-container"></div>
+
+    <div id="flipbook" style="width: 90%; max-width: 1100px; margin: 0 auto;"></div>
   </main>
 
-  <!-- ✅ PageFlip JS -->
-  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/page-flip.browser.min.js"></script>
-
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const images = [
-      "portfolio_1.jpg", "portfolio_2.jpg", "portfolio_3.jpg", "portfolio_4.jpg",
-      "portfolio_5.jpg", "portfolio_6.jpg", "portfolio_7.jpg", "portfolio_8.jpg",
-      "portfolio_9.jpg", "portfolio_10.jpg", "portfolio_11.jpg", "portfolio_12.jpg",
-      "portfolio_13.jpg", "portfolio_14.jpg", "portfolio_15.jpg", "portfolio_16.jpg"
-    ];
+    document.addEventListener("DOMContentLoaded", () => {
+      const flipbook = document.getElementById("flipbook");
 
-    const flipbook = new PageFlip(
-      document.getElementById("flipbook-container"),
-      {
-        width: 800,
-        height: 565,
+      const pageFlip = new window.PageFlip(flipbook, {
+        width: 550, // page width
+        height: 380, // page height
+        size: "stretch",
+        minWidth: 315,
+        maxWidth: 1000,
+        minHeight: 400,
+        maxHeight: 1350,
+        maxShadowOpacity: 0.5,
         showCover: true,
-        mobileScrollSupport: false,
-      }
-    );
+        mobileScrollSupport: true
+      });
 
-    flipbook.loadFromImages(images);
-  });
-</script>
+      const images = [
+        "portfolio_1.jpg",  // Cover page
+        "portfolio_2.jpg", "portfolio_3.jpg",
+        "portfolio_4.jpg", "portfolio_5.jpg",
+        "portfolio_6.jpg", "portfolio_7.jpg",
+        "portfolio_8.jpg", "portfolio_9.jpg",
+        "portfolio_10.jpg", "portfolio_11.jpg",
+        "portfolio_12.jpg", "portfolio_13.jpg",
+        "portfolio_14.jpg", "portfolio_15.jpg",
+        "portfolio_16.jpg"
+      ];
 
+      const pages = images.map(src => ({
+        src,
+        type: "image"
+      }));
+
+      pageFlip.loadFromImages(images);
+    });
+  </script>
 </body>
 </html>
