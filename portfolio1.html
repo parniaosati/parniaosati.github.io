@@ -28,51 +28,49 @@
 
   <main>
     <h1 class="project-title">2025 PORTFOLIO</h1>
-
-    <!-- Flipbook viewer -->
     <div id="flipbook-container"></div>
   </main>
 
   <!-- Flipbook library -->
-<script src="https://unpkg.com/stpageflip"></script>
+  <script src="https://unpkg.com/stpageflip"></script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const pageImages = [
-      'portfolio_cover.jpg',
-      'portfolio_1.jpg', 'portfolio_2.jpg',
-      'portfolio_3.jpg', 'portfolio_4.jpg',
-      'portfolio_5.jpg', 'portfolio_6.jpg',
-      'portfolio_7.jpg', 'portfolio_8.jpg',
-      'portfolio_9.jpg', 'portfolio_10.jpg',
-      'portfolio_11.jpg', 'portfolio_12.jpg',
-      'portfolio_13.jpg', 'portfolio_14.jpg',
-      'portfolio_15.jpg', 'portfolio_16.jpg'
-    ];
+  <!-- Flipbook script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const pageImages = [
+        'portfolio_cover.jpg', // Cover page
+        'portfolio_1.jpg', 'portfolio_2.jpg',
+        'portfolio_3.jpg', 'portfolio_4.jpg',
+        'portfolio_5.jpg', 'portfolio_6.jpg',
+        'portfolio_7.jpg', 'portfolio_8.jpg',
+        'portfolio_9.jpg', 'portfolio_10.jpg',
+        'portfolio_11.jpg', 'portfolio_12.jpg',
+        'portfolio_13.jpg', 'portfolio_14.jpg',
+        'portfolio_15.jpg', 'portfolio_16.jpg'
+      ];
 
-    const pages = pageImages.map(img => ({
-      src: img,
-      width: 1600,
-      height: 1130
-    }));
+      const pages = pageImages.map(img => ({
+        src: img,
+        width: 1600,
+        height: 1130
+      }));
 
-    const container = document.getElementById("flipbook-container");
+      const container = document.getElementById("flipbook-container");
 
-    const flipbook = new St.PageFlip(container, {
-      width: 800,
-      height: 565,
-      size: "stretch",
-      minWidth: 315,
-      maxWidth: 1600,
-      maxHeight: 1130,
-      minHeight: 420,
-      showCover: true,
-      mobileScrollSupport: true
+      const flipbook = new St.PageFlip(container, {
+        width: 800,
+        height: 565,
+        size: "stretch",
+        minWidth: 315,
+        maxWidth: 1600,
+        maxHeight: 1130,
+        minHeight: 420,
+        showCover: true,
+        mobileScrollSupport: true
+      });
+
+      flipbook.loadFromImages(pages);
     });
-
-    flipbook.loadFromImages(pages);
-  });
-</script>
-
+  </script>
 </body>
 </html>
