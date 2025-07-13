@@ -40,26 +40,27 @@
   <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/page-flip.browser.min.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const images = [
-        "portfolio_1.jpg", "portfolio_2.jpg", "portfolio_3.jpg", "portfolio_4.jpg",
-        "portfolio_5.jpg", "portfolio_6.jpg", "portfolio_7.jpg", "portfolio_8.jpg",
-        "portfolio_9.jpg", "portfolio_10.jpg", "portfolio_11.jpg", "portfolio_12.jpg",
-        "portfolio_13.jpg", "portfolio_14.jpg", "portfolio_15.jpg", "portfolio_16.jpg"
-      ];
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+      "portfolio_1.jpg", "portfolio_2.jpg", "portfolio_3.jpg", "portfolio_4.jpg",
+      "portfolio_5.jpg", "portfolio_6.jpg", "portfolio_7.jpg", "portfolio_8.jpg",
+      "portfolio_9.jpg", "portfolio_10.jpg", "portfolio_11.jpg", "portfolio_12.jpg",
+      "portfolio_13.jpg", "portfolio_14.jpg", "portfolio_15.jpg", "portfolio_16.jpg"
+    ];
 
-      const flipbook = new St.PageFlip(
-        document.getElementById("flipbook-container"),
-        {
-          width: 800,
-          height: 565,
-          showCover: true,
-          mobileScrollSupport: false,
-        }
-      );
+    const flipbook = new PageFlip(
+      document.getElementById("flipbook-container"),
+      {
+        width: 800,
+        height: 565,
+        showCover: true,
+        mobileScrollSupport: false,
+      }
+    );
 
-      flipbook.loadFromImages(images);
-    });
-  </script>
+    flipbook.loadFromImages(images);
+  });
+</script>
+
 </body>
 </html>
