@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2025 PORTFOLIO - Parnia Osati</title>
   <link rel="stylesheet" href="project.css" />
+  <style>
+    #flipbook-container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 50px auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body class="project-page">
   <header>
@@ -20,6 +28,49 @@
 
   <main>
     <h1 class="project-title">2025 PORTFOLIO</h1>
+
+    <!-- Flipbook viewer -->
+    <div id="flipbook-container"></div>
   </main>
+
+  <!-- Flipbook library -->
+  <script src="https://unpkg.com/stpageflip"></script>
+
+  <!-- Flipbook setup -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const pageImages = [
+        'portfolio-cover.jpg', // Cover page
+        'portfolio-1.jpg', 'portfolio-2.jpg',
+        'portfolio-3.jpg', 'portfolio-4.jpg',
+        'portfolio-5.jpg', 'portfolio-6.jpg',
+        'portfolio-7.jpg', 'portfolio-8.jpg',
+        'portfolio-9.jpg', 'portfolio-10.jpg',
+        'portfolio-11.jpg', 'portfolio-12.jpg',
+        'portfolio-13.jpg', 'portfolio-14.jpg',
+        'portfolio-15.jpg', 'portfolio-16.jpg'
+      ];
+
+      const pages = pageImages.map(img => ({
+        src: img,
+        width: 1600,
+        height: 1130
+      }));
+
+      const flipbook = new St.PageFlip(document.getElementById("flipbook-container"), {
+        width: 800,
+        height: 565,
+        size: "stretch",
+        minWidth: 315,
+        maxWidth: 1600,
+        maxHeight: 1130,
+        minHeight: 420,
+        showCover: true,
+        mobileScrollSupport: false
+      });
+
+      flipbook.loadFromImages(pages);
+    });
+  </script>
 </body>
 </html>
