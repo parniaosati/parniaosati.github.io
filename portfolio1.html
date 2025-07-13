@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <title>2025 PORTFOLIO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2025 PORTFOLIO - Parnia Osati</title>
   <link rel="stylesheet" href="project.css" />
+
+  <!-- ✅ PageFlip CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/page-flip/dist/page-flip.min.css"
+  />
   <style>
     #flipbook-container {
-      width: 100%;
+      width: 90%;
       max-width: 1100px;
       margin: 50px auto;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
   </style>
 </head>
@@ -31,40 +36,29 @@
     <div id="flipbook-container"></div>
   </main>
 
-  <!-- ✅ Correct CDN (UMD build) -->
-  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.6/dist/page-flip.browser.min.js"></script>
+  <!-- ✅ PageFlip JS -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/page-flip.browser.min.js"></script>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const pageImages = [
+    document.addEventListener("DOMContentLoaded", () => {
+      const images = [
         "portfolio_1.jpg", "portfolio_2.jpg", "portfolio_3.jpg", "portfolio_4.jpg",
         "portfolio_5.jpg", "portfolio_6.jpg", "portfolio_7.jpg", "portfolio_8.jpg",
         "portfolio_9.jpg", "portfolio_10.jpg", "portfolio_11.jpg", "portfolio_12.jpg",
         "portfolio_13.jpg", "portfolio_14.jpg", "portfolio_15.jpg", "portfolio_16.jpg"
       ];
 
-      const pages = pageImages.map(img => ({
-        src: img,
-        width: 1600,
-        height: 1130
-      }));
-
-      const flipbook = new window.FlipBook.PageFlip(
+      const flipbook = new St.PageFlip(
         document.getElementById("flipbook-container"),
         {
           width: 800,
           height: 565,
-          size: "stretch",
-          minWidth: 315,
-          maxWidth: 1600,
-          maxHeight: 1130,
-          minHeight: 420,
           showCover: true,
-          mobileScrollSupport: true
+          mobileScrollSupport: false,
         }
       );
 
-      flipbook.loadFromImages(pages);
+      flipbook.loadFromImages(images);
     });
   </script>
 </body>
