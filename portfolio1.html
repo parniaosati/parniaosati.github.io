@@ -34,43 +34,45 @@
   </main>
 
   <!-- Flipbook library -->
-  <script src="https://unpkg.com/stpageflip"></script>
+<script src="https://unpkg.com/stpageflip"></script>
 
-  <!-- Flipbook setup -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const pageImages = [
-        'portfolio_cover.jpg', // Cover
-        'portfolio_1.jpg', 'portfolio_2.jpg',
-        'portfolio_3.jpg', 'portfolio_4.jpg',
-        'portfolio_5.jpg', 'portfolio_6.jpg',
-        'portfolio_7.jpg', 'portfolio_8.jpg',
-        'portfolio_9.jpg', 'portfolio_10.jpg',
-        'portfolio_11.jpg', 'portfolio_12.jpg',
-        'portfolio_13.jpg', 'portfolio_14.jpg',
-        'portfolio_15.jpg', 'portfolio_16.jpg'
-      ];
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const pageImages = [
+      'portfolio_cover.jpg',
+      'portfolio_1.jpg', 'portfolio_2.jpg',
+      'portfolio_3.jpg', 'portfolio_4.jpg',
+      'portfolio_5.jpg', 'portfolio_6.jpg',
+      'portfolio_7.jpg', 'portfolio_8.jpg',
+      'portfolio_9.jpg', 'portfolio_10.jpg',
+      'portfolio_11.jpg', 'portfolio_12.jpg',
+      'portfolio_13.jpg', 'portfolio_14.jpg',
+      'portfolio_15.jpg', 'portfolio_16.jpg'
+    ];
 
-      const pages = pageImages.map(img => ({
-        src: img,
-        width: 1600,
-        height: 1130
-      }));
+    const pages = pageImages.map(img => ({
+      src: img,
+      width: 1600,
+      height: 1130
+    }));
 
-      const flipbook = new St.PageFlip(document.getElementById("flipbook-container"), {
-        width: 800,
-        height: 565,
-        size: "stretch",
-        minWidth: 315,
-        maxWidth: 1600,
-        maxHeight: 1130,
-        minHeight: 420,
-        showCover: true,
-        mobileScrollSupport: false
-      });
+    const container = document.getElementById("flipbook-container");
 
-      flipbook.loadFromImages(pages);
+    const flipbook = new St.PageFlip(container, {
+      width: 800,
+      height: 565,
+      size: "stretch",
+      minWidth: 315,
+      maxWidth: 1600,
+      maxHeight: 1130,
+      minHeight: 420,
+      showCover: true,
+      mobileScrollSupport: true
     });
-  </script>
+
+    flipbook.loadFromImages(pages);
+  });
+</script>
+
 </body>
 </html>
