@@ -31,10 +31,9 @@
     <div id="flipbook-container"></div>
   </main>
 
-  <!-- ✅ Flipbook library (correct version and path) -->
-  <script src="https://unpkg.com/page-flip@2.0.6/dist/js/page-flip.browser.min.js"></script>
+  <!-- ✅ Correct script from jsDelivr CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.6/dist/page-flip.browser.min.js"></script>
 
-  <!-- ✅ Flipbook initialization script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const pageImages = [
@@ -55,7 +54,7 @@
         height: 1130
       }));
 
-      const flipbook = new window.PageFlip(document.getElementById("flipbook-container"), {
+      const flipbook = new PageFlip(document.getElementById("flipbook-container"), {
         width: 800,
         height: 565,
         size: "stretch",
